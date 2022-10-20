@@ -22,8 +22,6 @@ const MessageContainer = ({ messages, onSend }) => {
     container: {
       height: "70vh",
       padding: "10px",
-      margin: "0 auto",
-      width: "50%",
       display: "flex",
       flexDirection: "column",
       justifyContent: "flex-end",
