@@ -40,13 +40,18 @@ let intents = [
     words: ["how are you", "how are you doing"],
     answer: "I am fine, thank you. How are you?",
   },
+  {
+    name: "love",
+    words: ["I love you","do you love me"],
+    answer: "I love you too",
+  }
 ];
 
 const handleAiDimag = (message) => {
   let answer = "I don't understand you";
   for (let intent of intents) {
     for (let word of intent.words) {
-      if (message.includes(word)) {
+      if (message.toLowerCase().includes(word.toLowerCase())) {
         answer = intent.answer;
         break;
       }
