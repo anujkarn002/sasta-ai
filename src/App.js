@@ -36,10 +36,18 @@ function App() {
     }, 1000);
   };
 
+  const styles = {
+    container: {
+      boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
+    },
+  };
+
   return (
     <div className="App">
-      <DavidChants />
-      <MessageContainer messages={messageList} onSend={handleSend} />
+      <div style={styles.container}>
+        <DavidChants />
+        <MessageContainer messages={messageList} onSend={handleSend} />
+      </div>
     </div>
   );
 }
